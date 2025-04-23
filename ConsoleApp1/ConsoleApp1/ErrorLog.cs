@@ -8,6 +8,8 @@ namespace ConsoleApp1
 {
     internal class ErrorLog : Log
     {
+        public ErrorLog(string message) : base(message) { }
+
         public override void Write(string message)
         {
             base.Write($"ERROR {message}");

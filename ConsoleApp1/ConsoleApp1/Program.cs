@@ -1,13 +1,13 @@
 ﻿using ConsoleApp1;
 
-Log log = new Log();
+ErrorLog errorLog = new ErrorLog("ErrorLogs.txt");
+errorLog.Write("Dit is een eerste error log");
+errorLog.Write("Dit is een tweede error log");
+errorLog.DisplayLog();
 
-ErrorLog errorLog = new ErrorLog();
-errorLog.Write("Dit is een error message");
-
-ActivityLog activityLog = new ActivityLog();
-activityLog.Write("Dit is een activity log");
-
-log.DisplayLog();
+ActivityLog activityLog = new ActivityLog("ActivityLogs.txt");
+activityLog.Write("Dit is een eerste activity log");
+activityLog.Write("Dit is een tweede activity log");
+activityLog.DisplayLog();
 
 Console.ReadLine();
